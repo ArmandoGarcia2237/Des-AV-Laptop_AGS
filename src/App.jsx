@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import Timer from './components/Timer.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +19,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
+      <div className="card" class="bg-dark rounded p-5">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -25,6 +27,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      <Timer />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
